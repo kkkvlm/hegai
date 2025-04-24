@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking Course Hegai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hegai</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О курсе</a></li>
+                <li><a href="#modules">Модули</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Networking Course</h2>
+        <p>Научись выстраивать полезные связи для бизнеса и жизни.</p>
+        <a href="#contacts" class="btn">Записаться на курс</a>
+    </section>
+
+    <section id="about" class="animate">
+        <h2>О курсе</h2>
+        <p>Краткое описание курса, его цели и преимущества.</p>
+    </section>
+    
+    <section id="modules" class="animate">
+        <h2>Модули курса</h2>
+        <div class="modules-grid">
+            <div class="module-card">
+                <h3>Модуль 1</h3>
+                <p>Основы нетворкинга: как знакомиться и выстраивать связи с нуля.</p>
+            </div>
+            <div class="module-card">
+                <h3>Модуль 2</h3>
+                <p>Стратегии построения связей: методы, которые работают в бизнесе и жизни.</p>
+            </div>
+            <div class="module-card">
+                <h3>Модуль 3</h3>
+                <p>Практика и кейсы: реальные примеры, задания и обратная связь.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="reviews" class="animate">
+        <h2>Отзывы участников</h2>
+        <blockquote>
+            "Курс помог мне расширить круг общения и найти новых партнёров."
+        </blockquote>
+    </section>
+
+    <footer id="contacts">
+        <p>Контакты: hello@heg.ai</p>
+    </footer>
+    <script>
+        const animItems = document.querySelectorAll('.animate');
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+    
+        animItems.forEach(item => observer.observe(item));
+    </script>    
+</body>
+</html>
+
